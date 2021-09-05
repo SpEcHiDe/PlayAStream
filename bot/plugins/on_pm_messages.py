@@ -19,14 +19,14 @@ from pyrogram import filters
 from pyrogram.types import Message
 from bot import (
     AUTH_USERS,
-    SHOULD_ALLOW_PMS
+    SHOULD_DIS_ALLOW_PMS
 )
 from bot.bot import Bot
 
 
 def pm_filter(_, __, message: Message):
     return (
-        SHOULD_ALLOW_PMS and
+        SHOULD_DIS_ALLOW_PMS and
         message and
         message.from_user and
         not message.from_user.is_bot and

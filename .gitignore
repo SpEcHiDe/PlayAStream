@@ -1,0 +1,8 @@
+**/*.session*
+config.env
+**/__pycache__
+*.log
+*.json
+*users
+venv/
+

@@ -92,7 +92,7 @@ GROUP_CALLS = {}
 # strings
 UN_MUTE_COMMAND_HNTTH = get_config("UN_MUTE_COMMAND_HNTTH", "unmute")
 MUTE_COMMAND_HNTTH = get_config("MUTE_COMMAND_HNTTH", "mute")
-SHOULD_ALLOW_PMS = bool(get_config("SHOULD_ALLOW_PMS", False))
+SHOULD_DIS_ALLOW_PMS = bool(get_config("SHOULD_DIS_ALLOW_PMS", False))
 PLAY_COMMAND_HNTTH = get_config("PLAY_COMMAND_HNTTH", "play")
 STOP_COMMAND_HNTTH = get_config("STOP_COMMAND_HNTTH", "stop")
 START_ED_PROC_ING_MESG = get_config("START_ED_PROC_ING_MESG", "⚡️")
