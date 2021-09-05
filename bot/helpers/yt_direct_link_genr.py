@@ -9,8 +9,9 @@ async def get_ytdl_link(original_yt_link: str):
         "youtube-dl",
         "-g",
         original_yt_link,
-        # "-f",
-        # "b[ext=mp4]"
+        # credits: https://t.me/c/1412793637/17346
+        "-f",
+        "best[height<=720]/bestvideo[height<=720]+bestaudio"
     ])
     stdout, _ = await process.communicate()
     stdout = stdout.decode().strip()
