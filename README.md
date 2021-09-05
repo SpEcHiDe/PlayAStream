@@ -9,7 +9,7 @@
 [![Bot Updates](https://img.shields.io/badge/PlayAStream-Updates-important)](https://t.me/PlayAStream)
 
 
-~~yet another~~ Telegram Voice Chat Bot By [@SpEcHiDe](https://GitHub.com/SpEcHiDe) To [Stream](https://t.me/PlayAStream) [Audio](https://t.me/MalayalamTrollVoice) / [Video](https://t.me/MemeVideoOffl) in Telegram [Voice Chat](https://t.me/MemeDialogue).
+~~yet another~~ Telegram Voice Chat Bot By [@SpEcHiDe](https://GitHub.com/SpEcHiDe) To [Stream](https://tx.me/PlayAStream) [Audio](https://tx.me/MalayalamTrollVoice) / [Video](https://tx.me/MemeVideoOffl) in Telegram [Voice Chat](https://tx.me/MemeDialogue).
 
 
 ## Config Vars:
