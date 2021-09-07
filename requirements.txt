@@ -5,4 +5,4 @@ TgCrypto==1.2.2
 python-dotenv>=0.10
 
 # pytgcalls
-pytgcalls==3.0.0.dev13
+pytgcalls==3.0.0.dev15
