@@ -6,3 +6,4 @@ python-dotenv>=0.10
 
 # pytgcalls
 pytgcalls==3.0.0.dev16
+youtube-dl
