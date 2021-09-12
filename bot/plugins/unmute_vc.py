@@ -21,34 +21,9 @@ from bot import (
     GROUP_CALLS,
     AUTH_USERS,
     COMMAND_HANDLER,
-    MUTE_COMMAND_HNTTH,
     UN_MUTE_COMMAND_HNTTH
 )
 from bot.bot import Bot
-
-
-@Bot.on_message(
-    filters.user(AUTH_USERS) &
-    filters.command(MUTE_COMMAND_HNTTH, COMMAND_HANDLER)
-)
-async def mute_commnd_fn(_, message: Message):
-    # send a message, use it to update the progress when required
-    status_message = await message.reply_text("⚡️", quote=True)
-
-    try:
-        _chat_id = message.command[1]
-        if _chat_id.startswith("-100"):
-            _chat_id = int(_chat_id)
-        else:
-            _chat_id = (await message._client.get_chat(_chat_id)).id
-    except IndexError:
-        _chat_id = message.chat.id
-
-    group_call = GROUP_CALLS.get(_chat_id)
-    if group_call:
-        await group_call.set_is_mute(True)
-
-    await status_message.delete()
 
 
 @Bot.on_message(
