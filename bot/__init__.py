@@ -64,6 +64,7 @@ AUTH_USERS = list(set(
     int(x) for x in get_config("AUTH_USERS").split(" ")
 ))
 TG_M_STREAM_URL = get_config("TG_M_STREAM_URL")
+YOUTUBE_DL_CMND = get_config("YOUTUBE_DL_CMND", "youtube-dl")
 
 logging.basicConfig(
     level=logging.INFO,

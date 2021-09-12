@@ -1,12 +1,17 @@
 from pyrogram.types import Message
-from bot import TG_DUMP_CHAT, TG_M_STREAM_URL, LOGGER
+from bot import (
+    LOGGER,
+    TG_DUMP_CHAT,
+    TG_M_STREAM_URL,
+    YOUTUBE_DL_CMND
+)
 from .run_shell_command import run_command
 from .link_fliter import extract_link
 
 
 async def get_ytdl_link(original_yt_link: str):
     process = await run_command([
-        "youtube-dl",
+        YOUTUBE_DL_CMND,
         "-g",
         original_yt_link
     ])
