@@ -1,3 +1,23 @@
+#!/usr/bin/env python3
+#  -*- coding: utf-8 -*-
+#  GetSongsBot
+#  Copyright (C) 2021 The Authors
+
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+from typing import Tuple
 from pyrogram.types import Message
 from bot import (
     LOGGER,
@@ -9,7 +29,9 @@ from .run_shell_command import run_command
 from .link_fliter import extract_link
 
 
-async def get_ytdl_link(original_yt_link: str):
+async def get_ytdl_link(original_yt_link: str) -> Tuple[str, str]:
+    """ get the video link of a yt_dl html link
+    """
     process = await run_command([
         YOUTUBE_DL_CMND,
         "-g",
@@ -23,6 +45,8 @@ async def get_ytdl_link(original_yt_link: str):
 
 
 async def get_stream_url(incoming_message: Message) -> str:
+    """ get the video link from a tg message
+    """
     stream_url = None
 
     if incoming_message and incoming_message.audio:
